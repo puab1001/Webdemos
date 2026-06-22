@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Kösk – Reutlingen</title>
+<meta name="description" content="Kösk in Reutlingen – Ihr kleines Stück Istanbul – direkt am Reutlinger Listplatz..">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Kösk – Reutlingen">
+<meta property="og:description" content="Kösk in Reutlingen – Ihr kleines Stück Istanbul – direkt am Reutlinger Listplatz..">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kösk – Reutlingen">
+<meta name="twitter:description" content="Kösk in Reutlingen – Ihr kleines Stück Istanbul – direkt am Reutlinger Listplatz..">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config={theme:{extend:{
+    colors:{ink:'#101014',paper:'#F4F1E9',smoke:'#17171C',chili:'#E11D2A',sun:'#F6B100',line:'#E4DCCB'},
+    fontFamily:{display:['Archivo','system-ui','sans-serif'],body:['Inter','system-ui','sans-serif']},
+  }}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth} body{font-family:'Inter',system-ui,sans-serif}
+  .font-display{font-family:'Archivo',system-ui,sans-serif}
+  .kicker{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
+  .photo-fallback{background:radial-gradient(120% 120% at 70% 8%,#2a2a33 0%,#101014 72%)}
+  .tint{position:relative;overflow:hidden}
+  .tint::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(160deg,rgba(225,29,42,.20),transparent 55%);mix-blend-mode:multiply}
+
+  .kenburns{animation:kb 22s ease-out forwards}@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.18)}}
+  .rise{opacity:0;transform:translateY(28px);animation:rise .95s cubic-bezier(.2,.7,.2,1) forwards}
+  .rise-1{animation-delay:.12s}.rise-2{animation-delay:.26s}.rise-3{animation-delay:.4s}.rise-4{animation-delay:.54s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:none}
+
+  /* Marquee-Band */
+  .marquee{display:flex;overflow:hidden}
+  .marquee>div{display:flex;flex:0 0 auto;align-items:center;gap:2.5rem;padding-right:2.5rem;white-space:nowrap;animation:scrollx 30s linear infinite}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+  .marquee .star{opacity:.45}
+
+  /* horizontale Galerie */
+  .hscroll{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.25rem .25rem 1rem}
+  .hscroll::-webkit-scrollbar{display:none}
+  .hcard{flex:0 0 300px;height:400px;scroll-snap-align:start;border-radius:1.5rem}
+  @media(min-width:640px){.hcard{flex:0 0 360px;height:460px}}
+  .tile img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}.tile:hover img{transform:scale(1.06)}
+
+  /* Speisekarte (Klassen werden von build_site._fill_menu erzeugt) */
+  .menu-cat{display:flex;align-items:center;gap:1rem;text-transform:uppercase;letter-spacing:.03em;font-weight:900;color:#E11D2A;font-size:clamp(1.25rem,2.6vw,1.7rem);margin:2.4rem 0 .7rem}
+  .menu-cat:first-child{margin-top:0}
+  .menu-cat::after{content:"";flex:1;height:3px;border-radius:2px;background:#E11D2A;opacity:.18}
+  .menu-row{display:flex;align-items:baseline;gap:.75rem;padding:.7rem 1rem;border-radius:1rem;transition:background .25s ease}
+  .menu-row:hover{background:rgba(225,29,42,.07)}
+  .menu-row .dots{flex:1;border-bottom:2px dotted currentColor;opacity:.2;transform:translateY(-3px)}
+  .menu-row>span:last-child{font-weight:800;color:#E11D2A;white-space:nowrap}
+
+  .btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:#101014;transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .btn:hover::before{transform:translateY(0)}
+  .bob{animation:bob 2.2s ease-in-out infinite}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+  @media(prefers-reduced-motion:reduce){.kenburns,.rise,.reveal,.bob,.marquee>div{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}.tile:hover img{transform:none}html{scroll-behavior:auto}}
+  :focus-visible{outline:3px solid #E11D2A;outline-offset:3px}
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-colors duration-500">
+  <div class="mx-auto max-w-6xl px-6 h-20 flex items-center justify-between">
+    <a href="#top" class="font-display font-black text-2xl tracking-tight uppercase text-paper" data-navtext>Kösk</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide text-paper" data-navtext>
+      <a href="#speisekarte" class="hover:text-chili transition">Karte</a>
+      <a href="#beliebt" class="hover:text-chili transition">Beliebt</a>
+      <a href="#standort" class="hover:text-chili transition">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <span id="status" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-paper" data-navtext><span id="status-dot" class="w-2 h-2 rounded-full bg-sun"></span><span id="status-text">Öffnungszeiten</span></span>
+      <a href="tel:" class="btn rounded-full bg-chili text-paper px-5 py-2.5 text-sm font-bold uppercase tracking-wide hover:text-paper">Anrufen</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="relative min-h-screen flex items-end overflow-hidden bg-ink">
+  <div class="absolute inset-0 photo-fallback overflow-hidden" data-parallax><img src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/155890445/conversions/contribution_gallery.jpg" alt="Kösk" class="kenburns w-full h-full object-cover opacity-80"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/20"></div>
+  <div class="relative mx-auto max-w-6xl w-full px-6 pb-28 sm:pb-36 text-paper">
+    <div class="rise rise-1 flex items-center gap-3 kicker text-sun"><span>Orientalische Küche</span><span class="w-8 h-px bg-sun/70"></span><span>Reutlingen</span></div>
+    <h1 class="rise rise-2 font-display font-black uppercase tracking-tight leading-[0.85] mt-5" style="font-size:clamp(3.2rem,13vw,9.5rem)">Kösk</h1>
+    <p class="rise rise-3 mt-6 max-w-xl text-paper/90 font-medium" style="font-size:clamp(1.1rem,2.4vw,1.5rem)">Ihr kleines Stück Istanbul – direkt am Reutlinger Listplatz.</p>
+    <div class="rise rise-4 mt-9 flex flex-wrap gap-3">
+      <a href="tel:" class="btn rounded-full bg-chili text-paper px-8 py-4 font-bold uppercase tracking-wide hover:text-paper">Jetzt bestellen</a>
+      <a href="#speisekarte" class="rounded-full border-2 border-paper/50 px-8 py-4 font-bold uppercase tracking-wide hover:bg-paper/10 transition">Zur Karte</a>
+    </div>
+  </div>
+  <a href="#story" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-paper/60 bob" aria-label="weiter">↓</a>
+</section>
+
+<!-- Marquee -->
+<div class="marquee bg-chili text-paper py-3 font-display font-black uppercase tracking-tight text-2xl sm:text-3xl" aria-hidden="true">
+  <div>
+    <span>Kösk</span><span class="star">✦</span><span>Orientalische Küche</span><span class="star">✦</span><span>Reutlingen</span><span class="star">✦</span>
+    <span>Kösk</span><span class="star">✦</span><span>Orientalische Küche</span><span class="star">✦</span><span>Reutlingen</span><span class="star">✦</span>
+    <span>Kösk</span><span class="star">✦</span><span>Orientalische Küche</span><span class="star">✦</span><span>Reutlingen</span><span class="star">✦</span>
+    <span>Kösk</span><span class="star">✦</span><span>Orientalische Küche</span><span class="star">✦</span><span>Reutlingen</span><span class="star">✦</span>
+  </div>
+</div>
+
+<!-- Story -->
+<section id="story" class="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+  <div class="grid sm:grid-cols-2 gap-10 sm:gap-14 items-center">
+    <div class="reveal">
+      <p class="kicker text-chili">Willkommen</p>
+      <h2 class="font-display font-extrabold uppercase tracking-tight leading-[1.1] mt-4" style="font-size:clamp(1.7rem,3.2vw,2.5rem)">Ihr kleines Stück Istanbul – direkt am Reutlinger Listplatz.</h2>
+      <p class="mt-5 text-ink/70 leading-relaxed max-w-[48ch]" style="font-size:clamp(1rem,1.15vw,1.1rem)">Am Listplatz verbindet das Kösk türkische Frühstückstradition mit frisch gegrilltem Fleisch: Serpme-Frühstück, saftige Kebabs, Yufka und Tagessuppe – bodenständig, gemütlich, mit viel Geschmack.</p>
+    </div>
+    <div class="reveal tint rounded-[1.75rem] photo-fallback overflow-hidden aspect-[4/5] shadow-xl"><img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/114674007/conversions/contribution_gallery.jpg" alt="" class="w-full h-full object-cover"></div>
+  </div>
+</section>
+
+<!-- Galerie: beliebt -->
+<section id="beliebt" class="bg-ink text-paper py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6 flex items-end justify-between reveal">
+    <h2 class="font-display font-black uppercase tracking-tight leading-none" style="font-size:clamp(2.2rem,6vw,4rem)">Aus der Küche</h2>
+    <span class="hidden sm:block kicker text-paper/40">wischen / scrollen →</span>
+  </div>
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="hscroll mt-10">
+      <figure class="hcard tile relative photo-fallback overflow-hidden ring-1 ring-paper/15">
+        <img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/114674006/conversions/contribution_gallery.jpg" alt="" class="w-full h-full object-cover">
+        
+      </figure>
+      <figure class="hcard tile relative photo-fallback overflow-hidden ring-1 ring-paper/15"><img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/155890379/conversions/contribution_gallery.jpg" alt="" class="w-full h-full object-cover"></figure>
+      <figure class="hcard tile relative photo-fallback overflow-hidden ring-1 ring-paper/15">
+        <img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/155890452/conversions/contribution_gallery.jpg" alt="" class="w-full h-full object-cover">
+        
+      </figure>
+      <figure class="hcard tile relative photo-fallback overflow-hidden ring-1 ring-paper/15"><img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/155890453/conversions/contribution_gallery.jpg" alt="" class="w-full h-full object-cover"></figure>
+      <figure class="hcard tile relative photo-fallback overflow-hidden ring-1 ring-paper/15">
+        <img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://images.pexels.com/photos/3804003/pexels-photo-3804003.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="" class="w-full h-full object-cover">
+        
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Speisekarte (PLATZHALTER: mit echten Speisen/Preisen fuellen; optional Kategorien) -->
+<section id="speisekarte" class="mx-auto max-w-4xl px-6 py-24 sm:py-32">
+  <div class="reveal flex flex-wrap items-end justify-between gap-6">
+    <div>
+      <p class="kicker text-chili">Speisekarte</p>
+      <h2 class="font-display font-black uppercase tracking-tight leading-none mt-3" style="font-size:clamp(2.2rem,6vw,4rem)">Unsere Karte</h2>
+    </div>
+    <p class="text-ink/50 text-sm max-w-xs sm:text-right">Eine Auswahl — die vollständige Karte gibt's vor Ort.</p>
+  </div>
+  <div class="reveal mt-10 rounded-[1.75rem] bg-white ring-1 ring-ink/10 shadow-sm p-5 sm:p-9">
+    <div class="space-y-1">
+      <!-- MENU_ROWS : je Zeile Name / Beschreibung / Preis; {"heading":"…"} = Kategorie -->
+    <p class="menu-cat font-display">Döner &amp; Yufka</p>
+    <div class="menu-row"><div><p class="font-display text-xl">Döner Kebab</p><p class="text-ink/55 text-sm">frisch vom Spieß im Fladenbrot</p></div></div>
+    <div class="menu-row"><div><p class="font-display text-xl">Yufka Döner</p><p class="text-ink/55 text-sm">mit Scheibenfleisch und frischem Gemüse</p></div></div>
+    <div class="menu-row"><div><p class="font-display text-xl">Lahmacun mit Dönerfleisch</p></div></div>
+    <p class="menu-cat font-display">Pide</p>
+    <div class="menu-row"><div><p class="font-display text-xl">Pide mit Hackfleisch</p></div></div>
+    <div class="menu-row"><div><p class="font-display text-xl">Pide mit Käse und Spinat</p></div></div>
+    <p class="menu-cat font-display">Tagesgerichte</p>
+    <div class="menu-row"><div><p class="font-display text-xl">Salatreis mit Bulgur und Lamm</p></div><span class="dots"></span><span class="font-medium">12,00 €</span></div>
+    <div class="menu-row"><div><p class="font-display text-xl">Linsensuppe</p><p class="text-ink/55 text-sm">hausgemacht</p></div></div>
+    <p class="menu-cat font-display">Frühstück</p>
+    <div class="menu-row"><div><p class="font-display text-xl">Serpme-Frühstück</p><p class="text-ink/55 text-sm">türkische Frühstücksplatte für 1–2 Personen</p></div></div>
+    <div class="menu-row"><div><p class="font-display text-xl">Heller Tee</p><p class="text-ink/55 text-sm">türkischer Çay</p></div></div>
+    <!-- /MENU_ROWS -->
+    </div>
+  </div>
+</section>
+
+<!-- Gaeste-Stimmen (PLATZHALTER: NUR mit echten Google-Bewertungen fuellen, niemals erfinden) -->
+<section class="bg-ink text-paper py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="kicker text-sun reveal">Gäste sagen</p>
+    <div class="grid sm:grid-cols-3 gap-6 mt-10">
+      <blockquote class="reveal bg-smoke rounded-[1.5rem] p-8 ring-1 ring-paper/10"><p class="font-display font-semibold text-xl leading-snug">„Sehr freundliches Personal und hervorragendes Essen. Kann ich uneingeschränkt empfehlen."</p><footer class="mt-5 text-sm text-paper/55">Bilal</footer></blockquote>
+      <blockquote class="reveal bg-smoke rounded-[1.5rem] p-8 ring-1 ring-paper/10"><p class="font-display font-semibold text-xl leading-snug">„Ich kann das Kösk in Reutlingen nur herzlich empfehlen – hier bleibt niemand unzufrieden."</p><footer class="mt-5 text-sm text-paper/55">Isa</footer></blockquote>
+      <blockquote class="reveal bg-smoke rounded-[1.5rem] p-8 ring-1 ring-paper/10"><p class="font-display font-semibold text-xl leading-snug">„"</p><footer class="mt-5 text-sm text-paper/55"></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Standort, Zeiten & Karte -->
+<section id="standort" class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+  <div class="grid sm:grid-cols-2 gap-14">
+    <div class="reveal">
+      <!-- Oeffnungszeiten -->
+      <p class="kicker text-chili">Öffnungszeiten</p>
+      <dl class="text-lg mt-6">
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Montag</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Dienstag</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Mittwoch</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Donnerstag</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Freitag</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3 border-b border-ink/10"><dt class="font-semibold">Samstag</dt><dd class="text-ink/60">09:00 – 21:00 Uhr</dd></div>
+        <div class="flex justify-between py-3"><dt class="font-semibold">Sonntag</dt><dd class="text-ink/60">10:00 – 21:00 Uhr</dd></div>
+      </dl>
+      <div class="mt-8 space-y-2 text-lg">
+        <p class="font-display font-extrabold text-2xl uppercase tracking-tight">Listplatz 2, 72764 Reutlingen</p>
+        <p>Telefon: <a href="tel:" class="text-chili font-semibold"></a></p>
+        <p>E-Mail: <a href="mailto:info@sofrakebaphouse.de" class="text-chili font-semibold">info@sofrakebaphouse.de</a></p>
+      </div>
+    </div>
+    <!-- eingebettete Karte: funktioniert ohne API-Key -->
+    <div class="reveal rounded-[1.75rem] overflow-hidden ring-1 ring-ink/10 min-h-[360px] photo-fallback">
+      <iframe class="w-full h-full min-h-[360px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Listplatz%202%2C%2072764%20Reutlingen&output=embed" title="Karte Kösk"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA-Band -->
+<section class="relative tint photo-fallback overflow-hidden">
+  <img loading="lazy" decoding="async" onerror="(this.closest('figure')||this).remove()" src="https://weur-cdn.speisekarte.menu/storage/media/company_gallery/155890452/conversions/contribution_gallery.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+  <div class="absolute inset-0 bg-ink/75"></div>
+  <div class="relative mx-auto max-w-6xl px-6 py-28 sm:py-40 text-center text-paper reveal">
+    <p class="kicker text-sun">Reutlingen</p>
+    <h2 class="font-display font-black uppercase tracking-tight leading-[0.9] mt-5" style="font-size:clamp(2.4rem,7vw,5rem)">Hunger?</h2>
+    <div class="mt-9 flex flex-wrap gap-3 justify-center">
+      <a href="tel:" class="btn rounded-full bg-chili text-paper px-8 py-4 font-bold uppercase tracking-wide hover:text-paper">Jetzt bestellen</a>
+      <!-- MAIL_CTA --><a href="mailto:info@sofrakebaphouse.de" class="rounded-full border-2 border-paper/50 px-8 py-4 font-bold uppercase tracking-wide hover:bg-paper/10 transition">Schreiben Sie uns</a><!-- /MAIL_CTA -->
+    </div>
+  </div>
+</section>
+
+<footer class="bg-smoke text-paper/70">
+  <div class="mx-auto max-w-6xl px-6 py-14">
+    <div class="flex flex-col sm:flex-row justify-between gap-6">
+      <div><p class="font-display font-black text-3xl uppercase tracking-tight text-paper">Kösk</p>
+        <!-- PLATZHALTER Social: echte Profile einsetzen oder entfernen -->
+        <div class="flex gap-4 mt-4 text-sm font-semibold uppercase tracking-wide"><a href="" class="hover:text-chili">Instagram</a><a href="https://www.facebook.com/koskrestaurantrt" class="hover:text-chili">Facebook</a></div>
+      </div>
+      <div class="text-sm sm:text-right leading-relaxed"><p>Listplatz 2, 72764 Reutlingen</p><p> · info@sofrakebaphouse.de</p></div>
+    </div>
+  </div>
+<div class="mx-auto max-w-6xl px-6 pb-8"><p class="text-bone/40 text-xs">Inoffizielle Vorschau-Seite · nicht vom Betrieb beauftragt · Angaben ohne Gewähr.</p></div></footer>
+
+<div class="sm:hidden fixed bottom-0 inset-x-0 z-50 bg-paper/95 backdrop-blur border-t border-ink/10 px-4 py-3 flex gap-3">
+  <a href="tel:" class="flex-1 text-center rounded-full bg-chili text-paper py-3 font-bold uppercase tracking-wide">Anrufen</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Listplatz%202%2C%2072764%20Reutlingen" class="flex-1 text-center rounded-full bg-ink text-paper py-3 font-bold uppercase tracking-wide">Route</a>
+</div>
+
+<script>
+  const c=document.getElementById('curtain');if(c)setTimeout(()=>c.remove(),2300);
+  const HOURS={0:[["10:00","21:00"]],1:[["09:00","21:00"]],2:[["09:00","21:00"]],3:[["09:00","21:00"]],4:[["09:00","21:00"]],5:[["09:00","21:00"]],6:[["09:00","21:00"]]};
+  const hm=d=>d.getHours()*60+d.getMinutes(),fmt=s=>s.replace(":",".");
+  (function(){const w=document.getElementById('status'),dot=document.getElementById('status-dot'),t=document.getElementById('status-text');if(!w)return;
+    const n=new Date(),td=HOURS[n.getDay()]||[];let o=null;
+    for(const[a,b]of td){const[ah,am]=a.split(":").map(Number),[bh,bm]=b.split(":").map(Number);if(hm(n)>=ah*60+am&&hm(n)<bh*60+bm){o=b;break;}}
+    w.classList.remove('hidden');
+    if(o){dot.className='w-2 h-2 rounded-full bg-green-500';t.textContent='Jetzt geöffnet · bis '+fmt(o)+' Uhr';}
+    else{dot.className='w-2 h-2 rounded-full bg-chili';t.textContent='Derzeit geschlossen';}})();
+  const nav=document.getElementById('nav');
+  const onScroll=()=>{const p=window.scrollY>window.innerHeight-90;nav.classList.toggle('bg-paper',p);nav.classList.toggle('shadow-md',p);
+    document.querySelectorAll('[data-navtext]').forEach(el=>{el.classList.toggle('text-ink',p);el.classList.toggle('text-paper',!p);});};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const hero=document.querySelector('[data-parallax]');
+  if(hero&&!matchMedia('(prefers-reduced-motion:reduce)').matches){window.addEventListener('scroll',()=>{hero.style.transform=`translateY(${window.scrollY*0.12}px)`;},{passive:true});}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
